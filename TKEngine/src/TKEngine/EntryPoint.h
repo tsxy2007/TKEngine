@@ -3,7 +3,9 @@
 extern TK::Application* TK::CreateApplication(); 
 int main()
 {
-	TK::Application* app = TK::CreateApplication();
+	TK::Log::Init();
+	TK_CORE_INFO("TKEngine Initialize!");
+	TK::Application* app = TK::CreateApplication(); 
 	app->Run();
 	delete app; 
 }
