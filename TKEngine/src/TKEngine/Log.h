@@ -2,6 +2,8 @@
 #include <memory>
 #include "Core.h"
 #include "spdlog/spdlog.h"
+#include "spdlog/fmt/ostr.h"
+
 namespace TK
 {
 	class TK_API Log
@@ -18,7 +20,7 @@ namespace TK
 
 }
 // Core log macros
-#define TK_CORE_ERROR(...)		::TK::Log::GetCoreLogger()->error(__VA_ARGS__)
+#define TK_CORE_TRACE(...)		::TK::Log::GetCoreLogger()->trace(__VA_ARGS__)
 #define TK_CORE_INFO(...)		::TK::Log::GetCoreLogger()->info(__VA_ARGS__)
 #define TK_CORE_WARN(...)		::TK::Log::GetCoreLogger()->warn(__VA_ARGS__)
 #define TK_CORE_ERROR(...)		::TK::Log::GetCoreLogger()->error(__VA_ARGS__)
@@ -26,7 +28,7 @@ namespace TK
 
 
 // Clinet log macros
-#define TK_ERROR(...)		::TK::Log::GetClientLogger()->error(__VA_ARGS__)
+#define TK_TRACE(...)		::TK::Log::GetClientLogger()->trace(__VA_ARGS__)
 #define TK_INFO(...)		::TK::Log::GetClientLogger()->info(__VA_ARGS__)
 #define TK_WARN(...)		::TK::Log::GetClientLogger()->warn(__VA_ARGS__)
 #define TK_ERROR(...)		::TK::Log::GetClientLogger()->error(__VA_ARGS__)

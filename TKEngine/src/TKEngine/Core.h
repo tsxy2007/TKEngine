@@ -11,3 +11,5 @@
 #else
 #error TK only support Windows!
 #endif // TK_PLATFORM_WINDOWS
+
+#define BIT(x) (1 << x)
