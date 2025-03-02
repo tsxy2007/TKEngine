@@ -16,6 +16,9 @@ project "TKEngine"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader ("tkpch.h")
+	pchsource ("TKEngine/src/tkpch.cpp")
+
 	files
 	{
 		"%{prj.name}/src/**.h",
@@ -36,11 +39,6 @@ project "TKEngine"
 		{
 			"TK_PLATFORM_WINDOWS",
 			"TK_BUILD_DLL"
-		}
-
-		postbuildcommands
-		{
-			("{COPYFILE} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
 		}
 
 	filter "configurations:Debug"
@@ -77,7 +75,10 @@ project "Sandbox"
 		"TKEngine/vendor/spdlog/include",
 		"TKEngine/src"
 	}
-
+	postbuildcommands
+	{
+		("{COPYFILE}  ../bin/" .. outputdir .. "/TKEngine".."/TKEngine.dll %{cfg.targetdir}/TKEngine.dll")
+	}
 	links
 	{
 		"TKEngine"
@@ -107,3 +108,5 @@ project "Sandbox"
 		defines "TK_DIST"
 		buildoptions "/utf-8"
 		optimize "On"
+		
+		

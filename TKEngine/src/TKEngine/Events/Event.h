@@ -2,8 +2,6 @@
 
 #include "spdlog/details/fmt_helper.h"
 #include "../Core.h"
-#include <string>
-#include <functional>
 #include "spdlog/fmt/ostr.h" // must be included
 #include "spdlog/sinks/stdout_sinks.h"
 

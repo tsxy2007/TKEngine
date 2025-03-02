@@ -34,6 +34,7 @@
     <ClInclude Include="src\TKEngine\Log.h">
       <Filter>TKEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\tkpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\TKEngine\Application.cpp">
@@ -42,5 +43,6 @@
     <ClCompile Include="src\TKEngine\Log.cpp">
       <Filter>TKEngine</Filter>
     </ClCompile>
+    <ClCompile Include="src\tkpch.cpp" />
   </ItemGroup>
 </Project>

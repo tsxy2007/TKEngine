@@ -1,7 +1,5 @@
 #pragma once
 #include "Event.h"
-#include <sstream>
-
 namespace TK
 {
 	class TK_API MouseMovedEvent : public Event
