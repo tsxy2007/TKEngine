@@ -1,3 +1,7 @@
 [submodule "TKEngine/vendor/spdlog"]
 	path = TKEngine/vendor/spdlog
 	url = git@github.com:gabime/spdlog.git
+
+	[submodule "TKEngine/vendor/fmt"]
+	path = TKEngine/vendor/fmt
+	url = git@github.com:fmtlib/fmt.git
